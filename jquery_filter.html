@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+<style>
+    *{
+        border: 2px solid grey;
+        margin: 3px;
+        padding: 3px;
+        list-style: none;
+    }
+</style>
+<body>
+    <div>div
+        <ul>ul
+            <li class="list">li1
+               <span style="display: inline-block; width:12%">span1</span> 
+            </li>
+            <li >li2
+                <span style="display: inline-block; width:12%">span2</span>
+            </li>
+
+        </ul>
+    </div>
+    <div>
+        <p>Lorem, ipsum.index=0</p>
+        <p>Lorem ipsum dolor sit. index=1</p>
+        <p class="demo">Lorem, ipsum dolor sit amet consectetur adipisicing elit. index= 3</p>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $('div').first().animate({"font-size":"12px"})
+            $("span").last().css({"color":"green","font-size":"25px"})
+            $("p").eq(2).css({"font-size":"25px","color":"blue"})
+            $("li").filter(".list").css("color","purple")
+            $("p").not(".demo").css({"background-color":"yellow"})
+        })
+    </script>
+   
+</body>
+</html>
